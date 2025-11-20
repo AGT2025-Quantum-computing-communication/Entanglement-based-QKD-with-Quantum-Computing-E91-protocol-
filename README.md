@@ -36,23 +36,4 @@ Indeed, if ${a_0,a_1}$ is the measurment outcome of Ange ${b_0,b_1}$ that of Bil
 
 $$ |E(a_0,b_0) - E(a_0,b_1) + E(a_1,b_0) +E(a_1,b_1)| \leq 2\sqrt{2}.$$
 
-In other words, if $A$ = {$X$, $Z$} and $B$ ={$W=\frac{1}{\sqrt{2}}(X + Z)$, $V=\frac{1}{\sqrt{2}}(-X + Z)$} are respectively the measurement basis of Ange and Bill, the CHSH inequality reads:
-$$ |\bra \Psi X \otimes W \ket \Psi -\bra \Psi X \otimes V \ket \Psi +\bra \Psi Z \otimes W \ket \Psi+\bra \Psi Z \otimes V \ket \Psi| \leq 2\sqrt{2}. $$
-
-Here in particular if we assume that the qubit pair are prepared in the Bell maximally entangled state $\ket \Psi = \frac{1}{\sqrt{2}}(\ket {01} - \ket {10})$, it is easy to check that $|C| = 2\sqrt{2}$. Therefore, our mission in this work will be to study how this quantity is affected by noise and/or eavesdropper's actions. But let's first demonstrate how to evaluate $|C|$ based on measurement outcomes. For this purpose, let's assume the measurement basis as an observable $O$ to be measured. In the spectral decomposition, this observable can be written as $O = \sum_j \lambda_j \ket {e_j}\bra {e_j}$, where $\lambda_j$ are the eigenvalues and $\ket {e_j}$  the eigenvectors, thus one has:
-$$ \bra \Psi O \ket \Psi = \sum_j \lambda_j \langle \Psi|  {e_j}\rangle  \langle  {e_j} | \Psi  \rangle = \sum_j \lambda_j P(\lambda_j),$$ 
-with $P(\lambda_j)$ the probability to measure the eigenvalues $\lambda_j$. It comes out naturally that 
-$$ \bra \Psi O_1 \otimes O_2 \ket \Psi = \sum_{jk} \lambda_j\lambda_k   P(\lambda_j,\lambda_k),$$ 
-where $P(\lambda_j,\lambda_k)$ is the joint probability to measure the eigenvalues $\lambda_j$ and $\lambda_k$ for observables $O_1$ and $O_2$ respectively. In this particular case where the measurment basis of Ange and Bill are well known to be $A$ = {$X$, $Z$} and $B$ ={$W=\frac{1}{\sqrt{2}}(X + Z)$, $V=\frac{1}{\sqrt{2}}(-X + Z)$} respectively, the corresponding eigenvalues of each of the observable are always $1$ and $-1$, therefore, 
-$$ \bra \Psi A_j \otimes B_k \ket \Psi = P_{jk}(-1,-1) - P_{jk}(-1,1) - P_{jk}(1,-1) + P_{jk}(1,1).$$
-
-Each probability term on the right hand side is determined by accounting the number of times $\lambda_j$ and $\lambda_k$ were measured given that the bases $A_j$ and $B_k$ were selected, i.e. if the experiment consists of sharing $N$ entangled qubits pairs, thus,
-$$P(\lambda_j,\lambda_k) = \frac{n(A_j|=\lambda_j, B_k|=\lambda_k)}{ N(A_j, B_k)},$$ 
-
-For example, to be more precise if $N$ qubit pairs are share between Ange and Bill, and during the procedure they select respectively $Z$ and $W$ $M$ times, the probabilities on are:
-$ P(-1,-1) = \frac{n(-1,-1)}{M}$, $P(1,-1) = \frac{n(1,-1)}{M}$, $P(-1,1) = \frac{n(-1,1)}{M}$ and $P(1,1) = \frac{n(1,1)}{M}$.
-
-<h2> 3. Experiment: Simulation of E91 on quantum hardwards</h2>
-
-<h3> 3.1. Simulation on ideal conditions: without noise neither eavesdroper interference</h3>
-Here we assume having an authenticated quantum channel through out which the qubits are being exchanged during the experiment. We also assume a fault tolerant quantum hardware to measure the state of qubit. This is done by considering a noise-free quantum backend (qiskit Aer simulator). It is known that with such backend we don't escape shot-noise, but we assume its effect negligible. Under these circumstances, the experiment is executed in the notebook.
+ Under these circumstances, the experiment is executed in the notebook.
