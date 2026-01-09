@@ -56,7 +56,8 @@ Each probability term on the right hand side is determined by accounting the num
 $$P(\lambda_j,\lambda_k) = \frac{n(A_j|=\lambda_j, B_k|=\lambda_k)}{ N(A_j, B_k)},$$ 
 
 For example, to be more precise if $N$ qubit-pairs are shared between Ange and Bill, and during the procedure they select respectively $Z$ and $W$ bases $M$ times, the probabilities are:
-$ P(-1,-1) = \frac{n(-1,-1)}{M}$, $P(1,-1) = \frac{n(1,-1)}{M}$, $P(-1,1) = \frac{n(-1,1)}{M}$ and $P(1,1) = \frac{n(1,1)}{M}$.
+
+$P(-1,-1) = \frac{n(-1,-1)}{M}$, $P(1,-1) = \frac{n(1,-1)}{M}$, $P(-1,1) = \frac{n(-1,1)}{M}$ and $P(1,1) = \frac{n(1,1)}{M}$.
 
 <h2> 3. Experiment: Simulation of E91 on quantum hardwards</h2>
 
