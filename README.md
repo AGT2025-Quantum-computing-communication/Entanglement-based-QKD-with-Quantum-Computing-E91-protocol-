@@ -17,7 +17,7 @@ In this project, we assume the source of entangled qubits on the sender's quantu
 
 1 - Ange prepares $N$ pairs of maximally entangled qubits, keeps qubit A and sends qubit B to bill through the quantum channel, sensitive to eavesdropping and noise. 
 
-2- Both parties randomly select a basis to measure their respective qubits ($\{X$, $\frac{1}{\sqrt{2}}(X + Z)$, $Z\}$ for Ange and $\{\frac{1}{\sqrt{2}}(X + Z)$, $Z$, $\frac{1}{\sqrt{2}}(-X + Z)\}$ for Bill).
+2- Both parties randomly select a basis to measure their respective qubits ($\{X, \frac{1}{\sqrt{2}}(X + Z), Z\}$ for Ange and $\{\frac{1}{\sqrt{2}}(X + Z), Z, \frac{1}{\sqrt{2}}(-X + Z)\}$ for Bill).
 
 3- They record their respective measurement results as a bit string ($a = \{0,1\}^N$, and $b = \{0,1\}^N$ for Ange and Bill respectively. It is worth mentioning that the measurement basis in step 2 are assumed as an observable to measure in maximally entangled state, i.e. if $X$ is the selected measurement basis on Ange side and $\frac{1}{\sqrt{2}}(X + Z)$ on Bill side, then the corresponding bit is obtained by taking $\bra \Psi X \otimes \frac{1}{\sqrt{2}}(X + Z) \ket \Psi$. Measuring this quantity in the computational basis will lead to either of the following bit strings, '00', '01', '10' or '11', depending on the state $\ket{\Psi}$, where the last bit in each bit string refers to Ange measurement result and the fist to Bill's one.
 
