@@ -17,9 +17,9 @@ In this project, we assume the source of entangled qubits on the sender's quantu
 
 1 - Ange prepares $N$ pairs of maximally entangled qubits, keeps qubit A and sends qubit B to bill through the quantum channel, sensitive to eavesdropping and noise. 
 
-2- Both parties randomly select a basis to measure their respective qubits (${X, \frac{1}{\sqrt{2}}(X + Z), Z}$ for Ange and ${\frac{1}{\sqrt{2}}(X + Z), Z, \frac{1}{\sqrt{2}}(-X + Z)}$ for Bill).
+2- Both parties randomly select a basis to measure their respective qubits i.e. (${X, \frac{1}{\sqrt{2}}(X + Z), Z}$) for Ange and (${\frac{1}{\sqrt{2}}(X + Z), Z, \frac{1}{\sqrt{2}}(-X + Z)}$) for Bill.
 
-3- They record their respective measurement results as a bit string ($a = {0,1}^N$, and $b = {0,1}^N$ for Ange and Bill respectively. It is worth mentioning that the measurement basis in step 2 are assumed as an observable to measure in maximally entangled state, i.e. if $X$ is the selected measurement basis on Ange side and $\frac{1}{\sqrt{2}}(X + Z)$ on Bill side, then the corresponding bit is obtained by taking $\bra \Psi X \otimes \frac{1}{\sqrt{2}}(X + Z) \ket \Psi$. Measuring this quantity in the computational basis will lead to either of the following bit strings, '00', '01', '10' or '11', depending on the state $\ket{\Psi}$, where the last bit in each bit string refers to Ange measurement result and the fist to Bill's one.
+3- They record their respective measurement results as a bit string ($a = (0,1)^N$, and $b = (0,1)^N$ for Ange and Bill respectively. It is worth mentioning that the measurement basis in step 2 are assumed as an observable to measure in maximally entangled state, i.e. if $X$ is the selected measurement basis on Ange side and $\frac{1}{\sqrt{2}}(X + Z)$ on Bill side, then the corresponding bit is obtained by taking $\bra \Psi X \otimes \frac{1}{\sqrt{2}}(X + Z) \ket \Psi$. Measuring this quantity in the computational basis will lead to either of the following bit strings, '00', '01', '10' or '11', depending on the state $\ket{\Psi}$, where the last bit in each bit string refers to Ange measurement result and the fist to Bill's one.
 
 4- They thus employ a classical channel to communicate to each other their respective measurement basis choices. This step is known as measurement basis reconciliation, which consists of discarding from their respective results those bits that measurement basis do not coincide. It is important to note that in an ideal situation (no noise, neither eavesdropper interference), their remaining bit strings should be perfectly correlated, identical and can be used as a key for secret communication with high privacy. But in real situation this not the case, thus they need extra mechanisms to correct errors and determine whether or not someone interfered with their exchanged qubits.
 
@@ -35,8 +35,8 @@ Indeed, if $\{a_0,a_1\}$ is the measurement outcome of Ange $\{b_0,b_1\}$ that o
 
 $$ |E(a_0,b_0) - E(a_0,b_1) + E(a_1,b_0) +E(a_1,b_1)| \leq 2\sqrt{2}.$$
 
-In other words, if $A$ = $\{X$, $Z\}$ and $B$ =$\{W=\frac{1}{\sqrt{2}}(X + Z)$, $V=\frac{1}{\sqrt{2}}(-X + Z)\}$ are respectively the measurement basis of Ange and Bill, the CHSH inequality reads:
-$$ |\bra \Psi X \otimes W \ket \Psi -\bra \Psi X \otimes V \ket \Psi +\bra \Psi Z \otimes W \ket \Psi+\bra \Psi Z \otimes V \ket \Psi| \leq 2\sqrt{2}. $$
+In other words, if $A = (X, Z)$ and $B = (W=\frac{1}{\sqrt{2}}(X + Z), V=\frac{1}{\sqrt{2}}(-X + Z))$ are respectively the measurement basis of Ange and Bill, the CHSH inequality reads:
+$$ |\bra \Psi X \otimes W \ket \Psi -\bra \Psi X \otimes V \ket \Psi +\bra \Psi Z \otimes W \ket \Psi+\bra \Psi Z \otimes V \ket \Psi| \leq 2\sqrt{2} $$
 
 Here in particular if we assume that the qubit pair are prepared in the Bell maximally entangled state $\ket \Psi = \frac{1}{\sqrt{2}}(\ket {01} - \ket {10})$, it is easy to check that $|C| = 2\sqrt{2}$. Therefore, our mission in this work will be to study how this quantity is affected by noise and/or eavesdropper's actions. But let's first demonstrate how to evaluate $|C|$ based on measurement outcomes. For this purpose, let's assume the measurement basis as an observable $O$ to be measured. In the spectral decomposition, this observable can be written as $O = \sum_j \lambda_j \ket {e_j}\bra {e_j}$, where $\lambda_j$ are the eigenvalues and $\ket {e_j}$  the eigenvectors, thus one has:
 $$ \bra \Psi O \ket \Psi = \sum_j \lambda_j \langle \Psi|  {e_j}\rangle  \langle  {e_j} | \Psi  \rangle = \sum_j \lambda_j P(\lambda_j),$$ 
