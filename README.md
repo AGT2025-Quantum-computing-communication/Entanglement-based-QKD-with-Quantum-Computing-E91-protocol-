@@ -36,6 +36,7 @@ Indeed, if $\{a_0,a_1\}$ is the measurement outcome of Ange $\{b_0,b_1\}$ that o
 $$ |E(a_0,b_0) - E(a_0,b_1) + E(a_1,b_0) +E(a_1,b_1)| \leq 2\sqrt{2}.$$
 
 In other words, if $A = (X, Z)$ and $B = (W=\frac{1}{\sqrt{2}}(X + Z), V=\frac{1}{\sqrt{2}}(-X + Z))$ are respectively the measurement basis of Ange and Bill, the CHSH inequality reads:
+
 $$ |\bra \Psi X \otimes W \ket \Psi -\bra \Psi X \otimes V \ket \Psi +\bra \Psi Z \otimes W \ket \Psi+\bra \Psi Z \otimes V \ket \Psi| \leq 2\sqrt{2}. $$
 
 Here in particular if we assume that the qubit pair are prepared in the Bell maximally entangled state $\ket \Psi = \frac{1}{\sqrt{2}}(\ket {01} - \ket {10})$, it is easy to check that $|C| = 2\sqrt{2}$. Therefore, our mission in this work will be to study how this quantity is affected by noise and/or eavesdropper's actions. But let's first demonstrate how to evaluate $|C|$ based on measurement outcomes. For this purpose, let's assume the measurement basis as an observable $O$ to be measured. In the spectral decomposition, this observable can be written as $O = \sum_j \lambda_j \ket {e_j}\bra {e_j}$, where $\lambda_j$ are the eigenvalues and $\ket {e_j}$  the eigenvectors, thus one has:
