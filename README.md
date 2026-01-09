@@ -1,5 +1,5 @@
 # Entanglement-based-QKD-with-Quantum-Computing-E91-protocol-
-In this project, I simulate an entanglement based QKD (the E91) protocol in quantum computer. I demonstrate that the secure key rate depends on the selected quantum hardware qubit-pair on which the experiment is executed, in the sense that the pair of qubit with lower two-qubit error provide lower QBER and higher key length.
+In this project, I simulate an entanglement based QKD (the E91) protocol in quantum computer. I demonstrate that the secure key rate depends on the selected quantum hardware qubit-pair on which the experiment is executed, in the sense that the pairs of qubits with lower two-qubit gate error provide lower QBER and higher key length.
 
 
 
